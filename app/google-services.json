@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "738568770286",
+    "firebase_url": "https://larapp-d1991.firebaseio.com",
+    "project_id": "larapp-d1991",
+    "storage_bucket": "larapp-d1991.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738568770286:android:90ba0eb95827eb5d",
+        "android_client_info": {
+          "package_name": "com.saklapp.nico.larapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738568770286-io40p5b7tih2sac68ib5maqknealbrju.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.saklapp.nico.larapp",
+            "certificate_hash": "4036963D2C53FEFD5ADB5ED6A5C0F16EDA81EF08"
+          }
+        },
+        {
+          "client_id": "738568770286-9msu717q9ao7fstua19vnjsghkothqff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBP0TP4ZH1V2whaShp0-L_zHdIyv42Bx9A"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738568770286-9msu717q9ao7fstua19vnjsghkothqff.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

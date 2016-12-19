@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 GPSTracker gps = new GPSTracker(this);
                 double latitude = gps.getLatitude();
                 double longitude = gps.getLongitude();
-                String message = activityMainBinding.editMessage.getText().toString() + "http://maps.google.com/maps?q=loc:" + latitude + "," + longitude;
+                String message = activityMainBinding.editMessage.getText().toString() + " http://maps.google.com/maps?q=loc:" + latitude + "," + longitude;
                 sendSMS(number, message);
                 break;
 

@@ -14,10 +14,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     ActivityMainBinding activityMainBinding;
     private String number;
+    GPSTracker gps;
+    double latitude, longitude;
+    String message;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         activityMainBinding.editMessage.setOnClickListener(this);
         activityMainBinding.buttonNumber.setOnClickListener(this);
@@ -27,6 +31,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             hideFields();
         } else {
             Toast.makeText(this, number, Toast.LENGTH_SHORT).show();
+//            if (String.valueOf(widget) == "true") {
+//                sendMessage();
+//            }
         }
     }
 
@@ -38,11 +45,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.button_send:
-                GPSTracker gps = new GPSTracker(this);
-                double latitude = gps.getLatitude();
-                double longitude = gps.getLongitude();
-                String message = activityMainBinding.editMessage.getText().toString() + " http://maps.google.com/maps?q=loc:" + latitude + "," + longitude;
-                sendSMS(number, message);
+                sendMessage();
                 break;
 
             case R.id.button_number:
@@ -96,5 +99,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.LENGTH_LONG).show();
             ex.printStackTrace();
         }
+    }
+
+    private void sendMessage() {
+        gps = new GPSTracker(this);
+        latitude = gps.getLatitude();
+        longitude = gps.getLongitude();
+        message = activityMainBinding.editMessage.getText().toString() + " http://maps.google.com/maps?q=loc:" + latitude + "," + longitude;
+        sendSMS(number, message);
     }
 }

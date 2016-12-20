@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">LarApp</string>
+    <string name="appwidget_text">LarApp</string>
+    <string name="add_widget">Add widget</string>
 </resources>

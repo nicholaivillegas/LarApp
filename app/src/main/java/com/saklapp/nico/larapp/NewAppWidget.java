@@ -14,11 +14,10 @@ public class NewAppWidget extends AppWidgetProvider {
 
     @Override
     public void onUpdate(Context context, AppWidgetManager appWidgetManager, int[] appWidgetIds) {
+        //TODO: Trigger button when widget is clicked
         RemoteViews remoteViews = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
         Intent configIntent = new Intent(context, MainActivity.class);
-        configIntent.putExtra("widget", "true");
         PendingIntent configPendingIntent = PendingIntent.getActivity(context, 0, configIntent, 0);
-
         remoteViews.setOnClickPendingIntent(R.id.appwidget_button, configPendingIntent);
         appWidgetManager.updateAppWidget(appWidgetIds, remoteViews);
     }
